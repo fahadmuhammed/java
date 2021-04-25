@@ -5,13 +5,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PersonTest {
+
   @Test
-  public void shouldReturnName(){
+  public void returnHelloWorld(){
 
     Person fahad = new Person();
-    fahad.name = "Fahad Muhammed";
-    fahad.age = 19;
-    assertEquals("Fahad Muhammed",fahad.getName());
-    assertEquals(19,fahad.getAge());
+    assertEquals("Hello World",fahad.helloWorld());
+  }
+
+  @Test
+  public void returnHelloFahad(){
+    Person person = new Person();
+    Person person2 = new Person();
+    assertEquals("Hello Fahad",person.hello("Fahad"));
   }
 }
