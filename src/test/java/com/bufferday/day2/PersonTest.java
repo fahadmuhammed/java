@@ -1,10 +1,13 @@
 package com.bufferday.day2;
 
+import com.bufferday.LoggingLevel;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PersonTest {
+
+
 
   @Test
   public void returnHelloWorld() {
@@ -77,8 +80,25 @@ public class PersonTest {
     for (Person person : persons) {
       person.helloWorld();
     }
+    Person myPerson = new Person();
+    Person myPerson2 = null;
+
+    Person[] persons2 = {persons[0], persons[3], myPerson, myPerson2, persons[2], persons[2], new Person(),};
+
+    LoggingLevel state= LoggingLevel.PROCESSING;
+    switch (state){
+      case PENDING:
+        /*falls through*/
+      case PROCESSED:
+        returnHelloWorld();
+        break;
+      default:
+
+    }
 
   }
+
+
 }
 
 
